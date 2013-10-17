@@ -1,0 +1,21 @@
+[
+  {
+    "image" : "images/item-2.png",
+    "heading" : "Home",
+    "text" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam ac gravida arcu, quis auctor elit. Praesent vestibulum vitae odio in eleifend. Duis laoreet odio sed ligula pulvinar, sed interdum neque feugiat. Curabitur id auctor mauris, ut ultricies est. Praesent congue viverra eros, sit amet fermentum odio semper id. Aliquam vestibulum dapibus dolor. In accumsan purus a pellentesque faucibus. Sed convallis ante non neque pretium, sed imperdiet risus dignissim. Nullam porttitor, mi vel viverra vulputate, arcu nunc tincidunt arcu, ut luctus lorem mauris eu velit. Nullam lobortis at felis iaculis gravida. Integer est libero, varius eu dictum ullamcorper, malesuada eu nibh. Vestibulum id erat iaculis, malesuada quam sed, tempus quam. Sed id malesuada ipsum. Nam condimentum, magna eget molestie elementum, nisl diam fermentum nunc, in hendrerit metus orci aliquet ante. Nunc tincidunt elementum suscipit. Nam vel fringilla nulla."
+  },
+	{
+		"image" : "images/item-1.png",
+		"heading" : "Careers",
+		"text" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+	},
+	{
+		"image" : "images/item-2.png",
+		"heading" : "Contact Us",
+		"text" : "Morbi tincidunt commodo scelerisque."
+	},{
+		"image" : "images/item-3.png",
+		"heading" : "About Us",
+		"text" : "Duis porttitor diam vitae leo elementum accumsan."
+	}
+]

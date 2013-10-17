@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+  <!--[if lt IE 7 ]><html class="ie ie6" lang="en"> <![endif]-->
+  <!--[if IE 7 ]><html class="ie ie7" lang="en"> <![endif]-->
+  <!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
+  <!--[if (gte IE 9)|!(IE)]><!--><html id="main" lang="en"> <!--<![endif]-->
+  <head>
+    <meta charset="utf-8">
+    <title>HTML5 and CSS# example</title>
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1">
+    <link rel="stylesheet" type="text/css" href="css/base.css">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <link rel="stylesheet" type="text/css" href="css/layout.css">
+  </head>
+<body>
+  <div class = 'container'>
+    <div id = 'top-div'>
+      <script id="nav-template" type="text/x-handlebars-template">
+        <header>
+          <img id="logo" src="images/logo.png"/>
+          <div id="nav-div">
+            <nav id="navigation">
+              <ul class = "navigation-url">
+                {{#each this}}
+                  <li><a id={{@index}} class='link' href="#">{{heading}}</a></li>
+                {{/each}}
+              </ul>
+            </nav>
+          </div>
+        </header>
+      </script>
+    </div>
+    <div id = 'bottom-div'>
+      <script id="content" type="text/x-handlebars-template">
+        <div id="page-contents">
+          <h1>{{heading}}</h1>
+          <div id = 'right-div'>
+            <p>
+              {{pageContent}}
+            </p>
+            <div id = 'form-div'>
+              <div class="form-msg">
+                <em>Form Successfully Submitted...</em>
+              </div>
+              <div id = 'contactus'>
+                <form name='contactus-form' id='contactus-form' action='#' method='post'>
+                  <input type="text" class="stacked" name="name" id="name" placeholder="Firstname Lastname"/>
+                  <input type="password" class="stacked" name="password" id="password" placeholder="Password"/>
+                  <input type="password" class="stacked" name="confirmpassword" id="confirmpassword" placeholder="Confirm Password"/>
+                  <input type="email" class="stacked" name="email" id="email" placeholder="Email"/>
+                  <input type="text" class="stacked" name="website" id="website" placeholder="Website"/>
+                  <input type="submit" class="stacked" name="submit" id="submit" value="Submit"/>
+                </form>
+              </div>
+              <div id = 'business-unit'>
+                <h3>Business Unit</h3>
+                <div style = "background-color:#eee; border: 1px solid #000; height: 150px;">
+                  <ul>
+                    <li>
+                       Sapient
+                       <ul>
+                         <li>SapientNitro</li>
+                         <li>Sapient Global Market</li>
+                         <li>Sapient Government Services</li>
+                         <li>Sapient (m)PHASIZE</li>
+                       </ul>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div id = 'left-div'>
+            <img src = {{imagePath}}>
+          </div>
+        </div>
+      </script>
+    </div>
+  </div>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/1.0.0-rc.4/handlebars.min.js"></script>
+  <script src="https://ajax.aspnetcdn.com/ajax/jquery.validate/1.11.1/jquery.validate.js"></script>
+  <script src="js/renderview.js"></script>
+  <script>
+    new uiDemo();
+  </script>
+  <script>
+    // This adds 'placeholder' to the items listed in the jQuery .support object. 
+    jQuery(function() {
+       jQuery.support.placeholder = false;
+       test = document.createElement('input');
+       if('placeholder' in test) jQuery.support.placeholder = true;
+    });
+    // This adds placeholder support to browsers that wouldn't otherwise support it. 
+    $(function() {
+       if(!$.support.placeholder) { 
+          var active = document.activeElement;
+          $(':input').focus(function () {
+             if ($(this).attr('placeholder') != '' && $(this).val() == $(this).attr('placeholder')) {
+                $(this).val('').removeClass('hasPlaceholder');
+             }
+          }).blur(function () {
+             if ($(this).attr('placeholder') != '' && ($(this).val() == '' || $(this).val() == $(this).attr('placeholder'))) {
+                $(this).val($(this).attr('placeholder')).addClass('hasPlaceholder');
+             }
+          });
+          $(':input').blur();
+          $(active).focus();
+          $('form:eq(0)').submit(function () {
+             $(':input.hasPlaceholder').val('');
+          });
+       }
+    });
+  </script>
+</body>
+</html>

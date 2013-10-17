@@ -1,0 +1,114 @@
+@CHARSET "UTF-8";
+body {
+  font-family: 'Armata-Regular-webfont';
+  font-size: 16px;
+  margin: 0;
+  padding: 0;
+}
+h1 {
+  border-bottom: 1px solid #e5e5e5;
+  color: #555;
+  font-size: 2.5em;
+  letter-spacing: .10em;
+  position: relative;
+}
+h3 {
+  border-bottom: 1px solid #e5e5e5;
+  color: #555;
+  letter-spacing: .10em;
+  position: relative;
+}
+p {
+  margin: 0 0 10px 0;
+  text-align: left;
+}
+img {
+  width: 100%;
+}
+header {
+  margin-left: auto;
+  margin-right: auto;
+  width: 80%;
+}
+ul{
+  list-style-position: outside;
+  list-style-type: square;
+}
+.container {
+  margin-top: 10px;
+}
+#top-div {
+  background-color: #E52E02;
+  box-shadow: 0px 10px 5px #ccc;
+}
+#logo {
+  height: 100%;
+  width:auto;
+}
+#nav-div {
+  float:right;
+}
+nav {
+  text-align: right;
+}
+nav ul {
+  display: inline-block;
+  list-style-type: none;
+  vertical-align: baseline;
+  vertical-align: middle;
+}
+nav li {
+  float: left;
+}
+nav a {
+  color: #fff;
+  display: block;
+  font-size: 1em;
+  font-weight: bold;
+  height: 26px;
+  line-height: 26px;
+  position: relative;
+  padding: 0 20px;
+  text-decoration: none;
+}
+nav a:hover {
+  color: #000;
+}
+.form-msg {
+  background-color: #E9F9D0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  color: #999;
+  font-size: 0.8em;
+  margin: 20px auto 20px auto;
+  padding: 1.0em 0.6em;
+  display: none;
+  visibility: hidden;
+}
+#bottom-div {
+  margin-left: auto;
+  margin-right: auto;
+  width: 80%;
+}
+#left-div {
+  float: right;
+  width: 25%;
+}
+#right-div {
+  float: right;
+  margin-left: 20px;
+  width: 70%;
+}
+#contactus {
+  float: left;
+  width: 50%;
+}
+#business-unit {
+  float: left;
+  width: 49%;
+}
+#form-div {
+  width: 100%;
+}
+
+

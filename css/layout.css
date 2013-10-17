@@ -1,0 +1,74 @@
+/*================================================== */
+/* #Page Styles
+================================================== */
+/* #Media Queries
+================================================== */
+
+/* Tablet Portrait size to standard 960 (devices and browsers) */
+@media only screen and (min-width: 768px) and (max-width: 959px) {
+  body {
+    font-size: 80%;
+  }
+}
+/* All Mobile Sizes (devices and browser) */
+@media only screen and (min-width: 641px) and (max-width: 767px) {
+  body {
+    font-size: 75%;
+  }
+}
+/* Mobile Landscape Size to Tablet Portrait (devices and browsers) */
+@media only screen and (min-width: 480px) and (max-width: 640px) {
+  body {
+    font-size: 70%;
+  }
+}  
+/* Mobile Portrait Size to Mobile Landscape Size (devices and browsers) */
+@media only screen and (max-width: 479px) {
+  body {
+    font-size: 50%;
+  }
+  #logo {
+    width:12%;
+  }
+}
+@media only screen and (max-width: 640px) {
+  nav {
+    text-align: center;
+  }
+  #header {
+    margin: 0;
+    width: 100%;
+  }
+  #left-div {
+    margin: 0 0 25px 0;
+    width: 100%;
+  }
+  #right-div {
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 640px) {
+  input:not([type="submit"]):not([type="reset"]):not([type="file"]), select, textarea {
+    width: 100%;
+  }
+  #contactus {
+    width: 100%;
+  }
+  #business-unit {
+    margin-bottom: 50px;
+    width: 100%;
+  }
+  header {
+    margin: 0;
+    width: 100%;
+  }
+  nav {
+    text-align: center;
+  }
+  nav ul {
+    width: 100%;
+  }
+  nav a {
+    padding: 0 10px;
+  }
+}
