@@ -1,3 +1,4 @@
+
 'use strict';
 var stringToSearch = '',
 	keyTimeout,
@@ -196,3 +197,42 @@ var selectAccessibility = function(e, $opnedDropdown) {
 	} else if ((/[\w\d]/).test(pressedKey)) {
 		stringToSearch += pressedKey;
 		keyTimeout = setTimeout(function () {
+			dropdownNavigateOnTyping($opnedDropdown);
+		}, 500);
+	}
+};
+
+/**
+	@function initCustomDropdown
+	@public
+	@returns {undefined}
+	@desc Custom Dropdown Initialization
+	@interface initCustomDropdown();
+*/
+var initCustomDropdown = function ($target) {
+
+	$target.off('click.customDropdown keydown.customDropdown').on('click.customDropdown keydown.customDropdown', '.js-dropdown', function(e, isManual) {
+		if (e.type === 'keydown') {
+			selectAccessibility(e, $(this).closest('.js-dropdown.opened'));
+		}
+		if (e.type === 'keydown' && e.which !== 13) {
+			return;
+		}
+		onclickDropdown.call(this, e, isManual);
+	}).off('mouseup.customDropdown').on('mouseup.customDropdown', function (e) {
+		var $dropdown = $('.js-dropdown.opened');
+		// if the target of the click isn't the container nor a descendant of the container
+		if (!$dropdown.is(e.target) && $dropdown.has(e.target).length === 0) {
+			closeCustomDropdown($dropdown);
+		}
+	});
+};
+
+module.exports.init = function () {
+	var $target = $('body');
+	initCustomDropdown($target);
+};
+
+// Expose Methods
+exports.initCustomDropdown = initCustomDropdown;
+exports.clearDropdown = clearDropdown;
